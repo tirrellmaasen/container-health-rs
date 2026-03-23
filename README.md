@@ -34,3 +34,8 @@ MIT
 ## Getting Started
 
 See individual files for usage details.
+
+
+## License
+
+MIT
