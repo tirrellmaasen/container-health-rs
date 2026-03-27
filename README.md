@@ -1,41 +1,29 @@
 # container-health-rs
 
-A small CLI tool to check the health of running containers. Written in Rust for minimal resource usage.
+A Rust-based container health monitoring system that integrates with Kubernetes, ArgoCD, and Docker for real-time monitoring and logging of container health.
 
-## Why
-
-I needed something lighter than a full monitoring stack for dev environments. This polls container health endpoints and exits non-zero on failure — useful in CI pipelines and Argo workflows.
-
-## Build
-
-```bash
-cargo build --release
-```
-
-## Usage
-
-```bash
-# Check a single endpoint
-container-health-rs --url http://localhost:8080/healthz --timeout 5
-
-# Check multiple from a config file
-container-health-rs --config checks.yaml
-```
-
-## Status
-
-Work in progress. Basic HTTP checks work. Adding TCP and gRPC support next.
-
-## License
-
-MIT
-
+## Features
+- Real-time container health monitoring
+- Integration with Kubernetes and ArgoCD
+- Comprehensive logging module
+- Docker support for container health checks
 
 ## Getting Started
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/TirrellMaasen/container-health-rs.git
+   ```
+2. Build the project:
+   ```bash
+   cargo build --release
+   ```
+3. Run the application:
+   ```bash
+   ./target/release/container-health-rs
+   ```
 
-See individual files for usage details.
-
+## Contributing
+Contributions are welcome! Please see the [CONTRIBUTING.md](CONTRIBUTING.md) file for guidelines.
 
 ## License
-
-MIT
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
